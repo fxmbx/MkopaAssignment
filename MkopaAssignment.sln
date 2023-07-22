@@ -1,0 +1,34 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.0.31903.59
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MessageQueueLibrary", "MessageQueueLibrary\MessageQueueLibrary.csproj", "{E5FA4E70-FB17-4A68-A951-8413722BBB86}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SmsService", "SmsService\SmsService.csproj", "{1ABE5FC9-96C7-4376-8D1D-BDADF97EF892}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SmsService.Test", "SmsService.Test\SmsService.Test.csproj", "{267578D6-CFFE-42C9-AB03-A073D6FE8AD9}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{E5FA4E70-FB17-4A68-A951-8413722BBB86}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{E5FA4E70-FB17-4A68-A951-8413722BBB86}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{E5FA4E70-FB17-4A68-A951-8413722BBB86}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{E5FA4E70-FB17-4A68-A951-8413722BBB86}.Release|Any CPU.Build.0 = Release|Any CPU
+		{1ABE5FC9-96C7-4376-8D1D-BDADF97EF892}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{1ABE5FC9-96C7-4376-8D1D-BDADF97EF892}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{1ABE5FC9-96C7-4376-8D1D-BDADF97EF892}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{1ABE5FC9-96C7-4376-8D1D-BDADF97EF892}.Release|Any CPU.Build.0 = Release|Any CPU
+		{267578D6-CFFE-42C9-AB03-A073D6FE8AD9}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{267578D6-CFFE-42C9-AB03-A073D6FE8AD9}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{267578D6-CFFE-42C9-AB03-A073D6FE8AD9}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{267578D6-CFFE-42C9-AB03-A073D6FE8AD9}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+EndGlobal

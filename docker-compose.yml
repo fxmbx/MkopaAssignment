@@ -1,0 +1,11 @@
+version: "3.4"
+services:
+  sms-service:
+    image: sms-service
+    build:
+      context: .
+      dockerfile: Dockerfile
+    environment:
+      - ASPNETCORE_ENVIRONMENT=Development
+    ports:
+      - 5059:5059

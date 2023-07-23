@@ -9,9 +9,8 @@ public class SmsServiceTests
     {
         // Arrange
         var loggerMock = new Mock<ILoggerService>();
-        var customHandlerMock = new Mock<ICustomHandler<string, SmsPayload>>();
 
-        var smsService = new SmsServiceImp(loggerMock.Object, customHandlerMock.Object);
+        var smsService = new SmsServiceImp(loggerMock.Object);
         var smsPayload = new SmsPayload
         {
             RecipientPhoneNumber = "+2349167641670",

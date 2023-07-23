@@ -42,7 +42,6 @@ public class RequestLoggerMiddleware
     private async Task LogRequest(HttpContext context)
     {
 
-
         var requestBody = string.Empty;
         if (context.Request.ContentLength != null && context.Request.ContentLength > 0)
         {

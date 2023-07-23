@@ -1,8 +1,8 @@
 using MessageQueueLibrary.Contracts;
 namespace MessageQueueLibrary;
-public class CustomProducer<TKey, TValue> : ICustomProducer<TKey, TValue> where TValue : class
+public class CustomProducer<TKey, TMessage> : ICustomProducer<TKey, TMessage> where TMessage : class
 {
-    public Task ProduceAsync(string topic, TKey key, TValue value)
+    public Task ProduceAsync(string topic, TKey key, TMessage msg)
     {
         throw new NotImplementedException();
     }

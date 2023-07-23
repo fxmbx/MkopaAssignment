@@ -65,7 +65,7 @@ To build a dev container run:
 make build-docker
 ```
 
-To run the docker imahe
+To run the docker image
 
 ```bash
 make run-docker
@@ -76,3 +76,8 @@ To run docker-compose
 ```bash
 make up
 ```
+
+###
+
+If i had more time i would have implemented exponential backoff for retry. it is an algorithm that allows you retry exponentially.
+basically giving the queue more time to come back up for each retry.

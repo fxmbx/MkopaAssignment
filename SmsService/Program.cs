@@ -1,6 +1,7 @@
 using MessageQueueLibrary;
 using MessageQueueLibrary.Contracts;
 using SmsService.Api.Extension;
+using SmsService.Infrastructure.Events;
 using SmsService.Infrastructure.Events.Handler;
 using SmsService.Infrastructure.Services;
 

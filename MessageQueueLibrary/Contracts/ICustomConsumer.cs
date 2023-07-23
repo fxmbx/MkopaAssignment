@@ -1,5 +1,6 @@
 namespace MessageQueueLibrary.Contracts;
-public interface ICustomConsumer<TKey, TValue> where TValue : class
+//TODO: Implement ICustomConsumer. advicable to have the retry mechanism within the implementation 
+public interface ICustomConsumer<TKey, TMessage> where TMessage : class
 {
-    Task Consume(string topic, CancellationToken stoppingToken);
+    Task Consume(string topic, Func demo, CancellationToken stoppingToken);
 }

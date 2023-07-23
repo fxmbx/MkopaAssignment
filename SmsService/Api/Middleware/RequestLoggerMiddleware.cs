@@ -29,7 +29,7 @@ public class RequestLoggerMiddleware
             var response = new ServiceResponse<object>
             {
                 Data = null,
-                Success = false,
+                Status = Enum.GetName(StatusEnum.FAILED),
                 StatusCode = HttpStatusCode.InternalServerError,
                 Message = ex.Message,
                 Description = ex.StackTrace ?? ex.Source

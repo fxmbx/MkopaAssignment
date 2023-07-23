@@ -1,5 +1,5 @@
 namespace MessageQueueLibrary.Contracts;
-public interface ICustomHandler<TKey, TValue>
+public interface ICustomHandler<TKey, TMessage>
 {
-    Task HandleAsync(TKey key, TValue value);
+    Task HandleAsync(TKey key, TMessage msg);
 }

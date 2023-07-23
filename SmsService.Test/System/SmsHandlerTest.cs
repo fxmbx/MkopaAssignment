@@ -12,8 +12,9 @@ public class SmsHandlerTest
 
         // Create a mock ICustomProducer<string, SmsPayload>
         var mockProducer = new Mock<ICustomProducer<string, SmsPayload>>();
+        var mockSmsService = new Mock<ISmsService>();
 
-        var smsHadler = new SmsHandler(mockProducer.Object);
+        var smsHadler = new SmsHandler(mockProducer.Object, mockSmsService.Object);
 
         // Act
         await smsHadler.HandleAsync(key, smsPayload);
@@ -36,7 +37,9 @@ public class SmsHandlerTest
         var smsPayload2 = new SmsPayload();
 
         var mockProducer = new Mock<ICustomProducer<string, SmsPayload>>();
-        var sHandler = new SmsHandler(mockProducer.Object);
+        var mockSmsService = new Mock<ISmsService>();
+
+        var sHandler = new SmsHandler(mockProducer.Object, mockSmsService.Object);
 
         // Act
         await sHandler.HandleAsync(key1, smsPayload1);

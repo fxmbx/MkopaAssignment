@@ -16,7 +16,7 @@ public class ExceptionWrapper<T>
     {
         ServiceResponse<T> response = new()
         {
-            Success = false,
+            Status = Enum.GetName(StatusEnum.FAILED),
             Message = Literals.FAILED,
             StatusCode = HttpStatusCode.InternalServerError,
 

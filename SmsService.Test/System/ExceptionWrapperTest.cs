@@ -8,7 +8,7 @@ public class ExceptionWrapperTest
     public async Task CallRepositoryAsync_SuccessfulExecution_ShouldReturnServiceResponse()
     {
         // Arrange
-        var expectedResult = new ServiceResponse<int> { Success = true, Data = 42 };
+        var expectedResult = new ServiceResponse<int> { Status = "DONE", Data = 42 };
         var mockLogger = new Mock<ILoggerService>();
         var exceptionWrapper = new ExceptionWrapper<int>(mockLogger.Object);
 
@@ -20,7 +20,7 @@ public class ExceptionWrapperTest
 
         // Assert
         Assert.Equal(expectedResult, result);
-        Assert.True(result.Success);
+        Assert.Equal("DONE", result.Status);
     }
 
     [Fact]
@@ -38,7 +38,7 @@ public class ExceptionWrapperTest
         var result = await exceptionWrapper.CallRepositoryAsync(repositoryMethod);
 
         // Assert
-        Assert.False(result.Success);
+        Assert.Equal("FAILED", result.Status);
         Assert.Equal(expectedException.GetStatusCode(), result.StatusCode);
         Assert.Equal(expectedException.Message, result.Description);
 
@@ -63,7 +63,7 @@ public class ExceptionWrapperTest
         var result = await exceptionWrapper.CallRepositoryAsync(repositoryMethod);
 
         // Assert
-        Assert.False(result.Success);
+        Assert.Equal("FAILED", result.Status);
         Assert.Equal(HttpStatusCode.InternalServerError, result.StatusCode);
         Assert.Equal(expectedException.Message, result.Description);
 

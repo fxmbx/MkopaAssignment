@@ -84,21 +84,20 @@ make up
 
 ### Explanation of problem being solved
 
-```
 The problem we are trying to solve is to build a simple microservice that acts as a wrapper around a 3rd-party SMS service API. The 3rd-party SMS service requires an HTTP request to send an SMS message to a customer's phone number, and we want to abstract this HTTP interaction behind an asynchronous flow in our microservice.
 
 By creating this microservice, we aim to achieve the following:
 
-Simplified Integration: The microservice will provide a simple and standardized interface for other services within our system to send SMS messages. This abstracts the complexity of interacting with the 3rd-party SMS service API directly, making it easier for developers to use the SMS functionality.
+- Simplified Integration: The microservice will provide a simple and standardized interface for other services within our system to send SMS messages. This abstracts the complexity of interacting with the 3rd-party SMS service API directly, making it easier for developers to use the SMS functionality.
 
-Asynchronous Handling: As SMS delivery might not be instantaneous, the microservice can use asynchronous communication to handle SMS sending. This ensures that the main application can continue executing without waiting for the SMS to be sent successfully.
+- Asynchronous Handling: As SMS delivery might not be instantaneous, the microservice can use asynchronous communication to handle SMS sending. This ensures that the main application can continue executing without waiting for the SMS to be sent successfully.
 
-Error Handling and Resilience: By implementing the Circuit Breaker pattern (as mentioned in a previous response), we can handle failures gracefully. If the 3rd-party SMS service experiences issues or becomes unresponsive, our microservice can protect the main application from potential cascading failures.
+- Error Handling and Resilience: By implementing the Circuit Breaker pattern (as mentioned in a previous response), we can handle failures gracefully. If the 3rd-party SMS service experiences issues or becomes unresponsive, our microservice can protect the main application from potential cascading failures.
 
-Scalability: The microservice can be designed to handle a high volume of SMS requests efficiently, allowing for horizontal scaling as the system's load increases.
+- Scalability: The microservice can be designed to handle a high volume of SMS requests efficiently, allowing for horizontal scaling as the system's load increases.
 
-Monitoring and Logging: Implementing proper monitoring and logging in the microservice allows us to track the SMS sending process, detect any issues, and troubleshoot problems effectively.
-```
+- Monitoring and Logging: Implementing proper monitoring and logging in the microservice allows us to track the SMS sending process, detect any issues, and troubleshoot problems effectively.
+
 
 ### If I had more time
 

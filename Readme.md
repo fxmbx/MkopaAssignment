@@ -102,5 +102,5 @@ By creating this microservice, we aim to achieve the following:
 ### If I had more time
 
 - i would publish the library to a private packagae repository to make it resusable across microservices
-- implement a circuit breaker pattern to avoid unnecesaary retries on a queue that has been down past a defined failure threshold (fail fast and graceful degredation)
+- implement a circuit breaker pattern to avoid unnecesaary retries on a service that has been down past a defined failure threshold (fail fast and graceful degredation)
 - write more thorough test ,integration test with the concrete implementation

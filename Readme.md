@@ -92,7 +92,7 @@ By creating this microservice, we aim to achieve the following:
 
 - Asynchronous Handling: As SMS delivery might not be instantaneous, the microservice can use asynchronous communication to handle SMS sending. This ensures that the main application can continue executing without waiting for the SMS to be sent successfully.
 
-- Error Handling and Resilience: By implementing the Circuit Breaker pattern (as mentioned in a previous response), we can handle failures gracefully. If the 3rd-party SMS service experiences issues or becomes unresponsive, our microservice can protect the main application from potential cascading failures.
+- Error Handling and Resilience: By implementing the a retry mechanism, we can handle failures. If the 3rd-party SMS service experiences issues or becomes unresponsive, our microservice can handle retries gracefully.
 
 - Scalability: The microservice can be designed to handle a high volume of SMS requests efficiently, allowing for horizontal scaling as the system's load increases.
 
@@ -101,6 +101,6 @@ By creating this microservice, we aim to achieve the following:
 
 ### If I had more time
 
-- i would publish the library to a private packagae repository to make it resusable acrrose microservices
+- i would publish the library to a private packagae repository to make it resusable across microservices
 - implement a circuit breaker pattern to avoid unnecesaary retries on a queue that has been down past a defined failure threshold (fail fast and graceful degredation)
 - write more thorough test ,integration test with the concrete implementation
